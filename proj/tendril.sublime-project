@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": ".."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "tendril",
+			"working_dir": "$project_path",
+			"shell_cmd": "call $project_path\\build.bat x64, dbg"
+		}
+	]
+}
