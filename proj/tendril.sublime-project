@@ -9,9 +9,14 @@
 	"build_systems":
 	[
 		{
-			"name": "tendril",
+			"name": "tendril msvc",
 			"working_dir": "$project_path",
 			"shell_cmd": "call $project_path\\build.bat x64, dbg"
+		},
+		{
+			"name": "tendril gcc",
+			"working_dir": "$project_path/..",
+			"shell_cmd": "env PKG_CONFIG_PATH=~/Projects/glfw/src clang++ -g -std=c++11 -o build/tendril tendril_ub.cpp -I/usr/local/include -I/usr/local/include/freetype2 -L/usr/local/lib -lecl `pkg-config --static --libs glfw3 freetype2`"
 		}
 	]
 }
